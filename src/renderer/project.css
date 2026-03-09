@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #1e293b, #0f172a 55%);
+  color: #e2e8f0;
+}
+
+.project-shell {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 1.25rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1rem;
+  border-radius: 0.8rem;
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.kicker {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  opacity: 0.78;
+}
+
+.track-subtitle {
+  margin-top: 0.2rem;
+  opacity: 0.85;
+}
+
+.track-title-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.track-title {
+  margin: 0;
+}
+
+.track-title-input {
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 0.4rem;
+  background: rgba(15, 23, 42, 0.7);
+  color: #fff;
+  padding: 0.35rem 0.45rem;
+  font-size: 1.1rem;
+  min-width: 240px;
+}
+
+.inline-edit-button {
+  background: #334155;
+  padding: 0.3rem 0.55rem;
+  font-size: 0.82rem;
+}
+
+.inline-edit-button:hover {
+  background: #475569;
+}
+
+.hidden {
+  display: none;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.player-card,
+.clips-card {
+  border-radius: 0.8rem;
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  padding: 1rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+#audio-player {
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+button {
+  border: none;
+  border-radius: 0.45rem;
+  padding: 0.55rem 0.85rem;
+  color: #fff;
+  cursor: pointer;
+  background: #2563eb;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.parts-list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.part-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  align-items: center;
+  padding: 0.6rem 0.7rem;
+  border-radius: 0.55rem;
+  background: rgba(30, 41, 59, 0.65);
+}
+
+.part-label {
+  text-align: left;
+}
+
+.part-actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.part-button {
+  background: #7c3aed;
+}
+
+.part-button:hover {
+  background: #6d28d9;
+}
+
+.part-edit {
+  background: #0ea5e9;
+}
+
+.part-edit:hover {
+  background: #0284c7;
+}
+
+@media (max-width: 720px) {
+  .project-header,
+  .part-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

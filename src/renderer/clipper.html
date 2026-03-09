@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clip Editor</title>
+    <link rel="stylesheet" href="./clipper.css" />
+  </head>
+  <body>
+    <main class="clipper-shell">
+      <h1>Clip Editor</h1>
+      <p id="track-name">No track loaded</p>
+
+      <audio id="clip-audio" controls></audio>
+
+      <section class="editor-card" aria-label="Clip controls">
+        <div class="name-field">
+          <label for="part-name">Part Name</label>
+          <input id="part-name" type="text" placeholder="Part name" />
+        </div>
+
+        <div class="field-grid">
+          <label for="clip-start">Start (sec)</label>
+          <input id="clip-start" type="number" min="0" step="0.1" value="0" />
+          <label for="clip-end">End (sec)</label>
+          <input id="clip-end" type="number" min="0" step="0.1" value="0" />
+        </div>
+
+        <div class="live-controls">
+          <p>Current position: <span id="current-position">0.0s</span></p>
+          <div class="actions">
+            <button id="set-start" type="button">Set Start At Current</button>
+            <button id="set-end" type="button">Set End At Current</button>
+            <button id="jump-start" type="button">Jump To Start</button>
+            <button id="jump-end" type="button">Jump To End</button>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="preview-clip" type="button">Preview Selection</button>
+          <button id="save-clip" type="button">Save Part</button>
+        </div>
+      </section>
+
+      <p id="clip-status">Adjust start/end and use Preview Selection to hear your cut.</p>
+    </main>
+
+    <script src="./clipper.js"></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+{
+  "name": "dance-player",
+  "version": "1.0.0",
+  "description": "A desktop Dance Player app built with Electron",
+  "main": "src/main.js",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electronmon .",
+    "package": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^36.1.0",
+    "electron-builder": "^25.1.8",
+    "electronmon": "^2.0.2"
+  },
+  "build": {
+    "appId": "com.danceplayer.app",
+    "productName": "DancePlayer",
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "mac": {
+      "category": "public.app-category.music"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "AudioVideo"
+    }
+  }
+}

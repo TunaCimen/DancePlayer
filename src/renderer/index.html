@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DancePlayer Home</title>
+    <link rel="stylesheet" href="./home.css" />
+  </head>
+  <body>
+    <main class="home-shell">
+      <h1>DancePlayer</h1>
+      <p>Create a new project from an MP3 file.</p>
+      <button id="new-project" type="button">New Project</button>
+
+      <section class="saves-section" aria-label="Previous saves">
+        <h2>Previous Saves</h2>
+        <div id="saved-projects" class="saved-projects"></div>
+      </section>
+
+      <p id="home-status"></p>
+      <p id="version" class="home-meta"></p>
+    </main>
+
+    <script src="./renderer.js"></script>
+  </body>
+</html>

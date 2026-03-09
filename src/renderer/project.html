@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DancePlayer Project</title>
+    <link rel="stylesheet" href="./project.css" />
+  </head>
+  <body>
+    <main class="project-shell">
+      <header class="project-header">
+        <div>
+          <div class="track-title-row">
+            <h1 id="track-title" class="track-title">Track</h1>
+            <input id="track-title-input" class="track-title-input hidden" type="text" />
+            <button id="edit-track-name" class="inline-edit-button" type="button">Edit</button>
+            <button id="save-track-name" class="inline-edit-button hidden" type="button">Save</button>
+            <button id="cancel-track-name" class="inline-edit-button hidden" type="button">Cancel</button>
+          </div>
+        </div>
+        <p id="status-text">Ready</p>
+      </header>
+
+      <section class="player-card">
+        <p id="now-playing">No track loaded</p>
+        <audio id="audio-player" controls></audio>
+        <div class="actions">
+          <button id="open-clipper" type="button">Open Clip Editor</button>
+        </div>
+      </section>
+
+      <section class="clips-card">
+        <h2>Clips</h2>
+        <div id="parts-list" class="parts-list"></div>
+      </section>
+    </main>
+
+    <script src="./project.js"></script>
+  </body>
+</html>
